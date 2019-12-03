@@ -1,4 +1,4 @@
-const { readFileToArray } = require("../utils");
+const { readFileToArray } = require("../../utils");
 
 const basicFuelCalc = mass => Math.floor(mass / 3) - 2;
 const sum = (prev, current) => prev + current;
@@ -12,7 +12,7 @@ function extendedFuelCalc(mass) {
 }
 
 async function main() {
-  const inputs = await readFileToArray("day1/input.txt");
+  const inputs = await readFileToArray("input.txt");
 
   // part 1
   console.log(inputs.map(basicFuelCalc).reduce(sum));
